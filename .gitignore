@@ -1,32 +1,46 @@
-# Prerequisites
-*.d
+#include <iostream>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int main()
+{
+    int a, b, c, d, e, f;
+    int A, B, C, D, E, F, G, H, I;
+    int O;
 
-# Precompiled Headers
-*.gch
-*.pch
+    std::cin >> O;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    if (O == 1)
+    {
+        std::cin >> a >> b >> c;
+        std::cin >> d >> e >> f;
 
-# Fortran module files
-*.mod
-*.smod
+        A = b * f;
+        B = c * e;
+        C = A - B;
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+        D = c * d;
+        E = a * f;
+        F = D - E;
 
-# Executables
-*.exe
-*.out
-*.app
+        G = a * e;
+        H = b * d;
+        I = G - H;
+
+        std::cout << "(" << C << "," << F << "," << I << ")";
+    }  
+    if ( O == 2)
+    {
+        std::cin >> a >> b >> c;
+        std::cin >> d >> e >> f;
+
+        A = a * d;
+        B = b * e;
+        C = c * f;
+        D = A + B + C;
+
+        std::cout << D;
+    }
+    else
+    {
+        std::cout << "NOT EXIST CODE";
+    }
+}
